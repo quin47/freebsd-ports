@@ -2,10 +2,10 @@
 # Vadim Zhukov <zhuk@openbsd.org>
 
 PORTNAME=	intellij
-PORTVERSION=	2022.2.4
+PORTVERSION=	2022.3.2
 CATEGORIES=	java devel
 MASTER_SITES=	https://download-cf.jetbrains.com/idea/
-DISTNAME=	ideaIC-${PORTVERSION}-no-jbr
+DISTNAME=	ideaIC-${PORTVERSION}
 DIST_SUBDIR=	jetbrains
 
 MAINTAINER=	vishwin@FreeBSD.org
@@ -21,7 +21,7 @@ RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 USES=		python:run shebangfix ssl
 
 USE_JAVA=	yes
-JAVA_VERSION=	11+
+JAVA_VERSION=	18
 
 SHEBANG_FILES= bin/restart.py
 
@@ -32,7 +32,7 @@ NO_ARCH_IGNORE=	libjansi.so
 NO_BUILD=	yes
 
 BUILD_TYPE=	IC
-BUILD_VERSION=	222.4459.24
+BUILD_VERSION=	223.8617.56
 BUILD_MARKER=	${BUILD_TYPE}-${BUILD_VERSION}
 PLIST_SUB=	BUILD_MARKER=${BUILD_MARKER}
 WRKSRC=		${WRKDIR}/idea-${BUILD_MARKER}
